@@ -1,0 +1,1570 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <title>Fresh Capital</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
+
+  <!-- <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png"> -->
+  <!-- <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png"> -->
+  <link rel="shortcut icon" href="img/favicon.ico">
+  <link href="css/style.min.css" rel="stylesheet" media="screen">
+
+  <script>
+    // Маркер работающего javascript
+    document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
+    document.addEventListener('DOMContentLoaded', function(){
+      if (window.isMobile !== undefined) {
+        // console.log(isMobile);
+        if(isMobile.any) {
+          var rootClasses = ' is-mobile';
+          for (key in isMobile) {
+            if(typeof isMobile[key] === 'boolean' && isMobile[key] && key !== 'any') rootClasses += ' is-mobile--'+key;
+            if(typeof isMobile[key] === 'object' && key !== 'other') {
+              for (type in isMobile[key]) {
+                if(isMobile[key][type]) rootClasses += ' is-mobile--'+key+'-'+type;
+              }
+            }
+          }
+          document.documentElement.className += rootClasses;
+        }
+      }
+      else {
+        console.log('Классы для мобильных не добавлены: в сборке отсутствует isMobile.js');
+      }
+    });
+
+  </script>
+
+</head>
+
+<body class="drawer drawer--right">
+
+  <div class="page__inner">
+
+    <div class="page__content">
+
+      <header class="page-header" role="banner">
+        <div class="page-header__box">
+          <div class="page-header__container">
+            <div class="page-header__row">
+              <a href="#" class="page-header__logo"><img src="img/logo.png" alt=""></a>
+              <div class="page-header__info">
+                <div class="contacts-part contacts-part--dark">
+                  <div class="contacts-part__title">Адрес</div>
+                  <div class="contacts-part__item contacts-part__item--addr">
+                    <svg width="16" height="16" class="icon">
+                      <use xlink:href="img/sprite-svg.svg#location-pin"></use>
+                    </svg>
+                    Москва, ул. Власова 45
+                  </div>
+                </div>
+                <div class="contacts-part contacts-part--dark">
+                  <div class="contacts-part__title">Звонок бесплатный</div>
+                  <a class="contacts-part__item contacts-part__item--phone" href="tel:88003456767">
+                    <svg width="16" height="16" class="icon">
+                      <use xlink:href="img/sprite-svg.svg#phone-receiver"></use>
+                    </svg>
+                    8 (800) 245-67-67
+                  </a>
+                </div>
+              </div>
+              <div class="page-header__btns">
+                <a href="#modal-call-back" class="btn btn--main" data-toggle="modal">
+                  <svg width="16" height="16" class="btn__icon">
+                    <use xlink:href="img/sprite-svg.svg#phone-receiver"></use>
+                  </svg>
+                  Обратный звонок
+                </a>
+                <div class="burger drawer-toggle"><span></span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <nav class="page-header__nav">
+          <div class="page-header__container">
+            <ul class="nav">
+              <li><a href="#section-1">Схема работы</a></li>
+              <li><a href="#section-2">Что это?</a></li>
+              <li><a href="#section-3">Для кого это?</a></li>
+              <li><a href="#section-4">Калькулятор</a></li>
+              <li><a href="#section-5">Как получить деньги?</a></li>
+              <li><a href="#section-6">О нас</a></li>
+              <li><a href="#section-7">Контакты</a></li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+
+
+      <!-- intro -->
+      <div class="intro">
+        <div class="intro__container">
+          <div class="intro__caption">
+            <h1 class="intro__title">Удобный кредит для <br>малого бизнеса</h1>
+            <p class="intro__sub-title">без ежемесячных платежей</p>
+            <div class="intro__application">
+              <h4>Дополнительные условия оффера</h4>
+              <ul>
+                <li>
+                  <svg width="52" height="52" class="icon">
+                    <use xlink:href="img/sprite-svg.svg#clock"></use>
+                  </svg>
+                  <p>Решение</p>
+                  <h4>за 24 часа</h4>
+                </li>
+                <li>
+                  <svg width="52" height="50" class="icon">
+                    <use xlink:href="img/sprite-svg.svg#business-and-finance"></use>
+                  </svg>
+                  <p>Ставка</p>
+                  <h4>от 15%</h4>
+                </li>
+                <li>
+                  <svg width="52" height="52" class="icon">
+                    <use xlink:href="img/sprite-svg.svg#ruble"></use>
+                  </svg>
+                  <p>Сумма</p>
+                  <h4>до 10 млн. a</h4>
+                </li>
+              </ul>
+              <a href="#" class="btn btn--main">Отправить заявку</a>
+            </div>
+          </div>
+          <div class="swiper-container intro__slider">
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide" style="background-image: url(img/intro-img-01.png);">
+              </div>
+              <div class="swiper-slide" style="background-image: url(img/intro-img-02.png);">
+              </div>
+              <div class="swiper-slide" style="background-image: url(img/intro-img-03.png);">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- l-section -->
+      <section class="l-section" id="section-1">
+        <div class="l-section__container">
+          <div class="l-section__header">
+            <h2 class="l-section__title">Получите деньги за 72 часа</h2>
+            <p class="l-section__sub-title">На любые бизнес цели без залога и поручителей</p>
+          </div>
+          <div class="get-steps">
+            <div class="get-steps__inner">
+              <div class="get-steps__item">
+                <div class="get-steps__icon">
+                  <svg width="51" height="71" class="icon">
+                    <use xlink:href="img/sprite-svg.svg#tap"></use>
+                  </svg>
+                </div>
+                <div class="get-steps__text">Заполнить заявку</div>
+              </div>
+              <div class="get-steps__item">
+                <div class="get-steps__icon">
+                  <svg width="71" height="71" class="icon">
+                    <use xlink:href="img/sprite-svg.svg#time"></use>
+                  </svg>
+                </div>
+                <div class="get-steps__text">Дождитесь одобрения</div>
+              </div>
+              <div class="get-steps__item">
+                <div class="get-steps__icon">
+                  <svg width="73" height="71" class="icon">
+                    <use xlink:href="img/sprite-svg.svg#payment-method"></use>
+                  </svg>
+                </div>
+                <div class="get-steps__text">Получите деньги</div>
+              </div>
+            </div>
+            <div class="get-steps__action">
+              <a href="#" class="btn btn--main">Скачать анкету</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ./l-section -->
+
+      <!-- l-section -->
+      <section class="l-section gray-bg" id="section-2">
+        <div class="l-section__container">
+          <div class="l-section__header">
+            <h2 class="l-section__title">Заголовок третьего блока</h2>
+            <p class="l-section__sub-title">Типичный блок, который можно использовать для дополнительного текста</p>
+          </div>
+          <div class="info-box">
+            <div class="info-box__col info-box__col--image">
+              <div class="info-box__img-wrap">
+                <img src="img/info-box-img.jpg" alt="">
+              </div>
+            </div>
+            <div class="info-box__col info-box__col--text">
+              <h3>Подзаголовок</h3>
+              <p>Не следует, однако забывать, что постоянный количественный рост и сфера нашей активности обеспечивает широкому кругу (специалистов) участие в формировании позиций, занимаемых участниками в отношении поставленных задач. Повседневная практика показывает, что дальнейшее развитие различных форм деятельности играет важную роль в формировании направлений прогрессивного развития.</p>
+              <p>Разнообразный и богатый опыт дальнейшее развитие различных форм деятельности позволяет выполнять важные задания по разработке дальнейших направлений развития. </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ./l-section -->
+
+      <!-- l-section -->
+      <section class="l-section" id="section-3">
+        <div class="l-section__container">
+          <div class="l-section__header">
+            <h2 class="l-section__title">Финансовый калькулятор Pos Factor</h2>
+            <p class="l-section__sub-title">Денежные средства предоставляются на срок до 6 месяцев</p>
+          </div>
+          <form action="" class="cash-calc">
+            <div class="cash-calc__row">
+              <div class="cash-calc__col">
+                <div class="field-range">
+                  <div class="field-range__header">
+                    <div class="field-range__name">Сумма кредита</div>
+                    <div class="field-range__val">750 00 <span class="rub">a</span></div>
+                  </div>
+                  <div class="field-range__input-wrap">
+                     <input type="text" class="js-range-slider" name="my_range" value=""
+                          data-min="100"
+                          data-max="1000"
+                          data-from="200"
+                          data-to="500"
+                          data-grid="true"
+                      />
+                  </div>
+                </div>
+                <div class="field-range">
+                  <div class="field-range__header">
+                    <div class="field-range__name">Количество платежей</div>
+                    <div class="field-range__val">50</div>
+                  </div>
+                  <div class="field-range__input-wrap">
+                    <div class="field-range__input-wrap">
+                       <input type="text" class="js-range-slider" name="my_range" value=""
+                            data-min="100"
+                            data-max="1000"
+                            data-from="200"
+                            data-to="500"
+                            data-grid="true"
+                        />
+                    </div>
+                  </div>
+                </div>
+                <div class="field-radio-calc">
+                  <div class="field-radio-calc__title">Выберите срок</div>
+                  <div class="field-radio-calc__input-group">
+                    <div class="field-radio-calc__input-wrap">
+                      <label class="field-radio-calc__item">
+                        <input class="field-radio-calc__input" type="radio" id="" name="demo-radio" checked>
+                        <span class="field-radio-calc__item-text">1 мес.</span>
+                      </label>
+                    </div>
+                    <div class="field-radio-calc__input-wrap">
+                      <label class="field-radio-calc__item">
+                        <input class="field-radio-calc__input" type="radio" id="" name="demo-radio">
+                        <span class="field-radio-calc__item-text">2 мес.</span>
+                      </label>
+                    </div>
+                    <div class="field-radio-calc__input-wrap">
+                      <label class="field-radio-calc__item">
+                        <input class="field-radio-calc__input" type="radio" id="" name="demo-radio">
+                        <span class="field-radio-calc__item-text">3 мес.</span>
+                      </label>
+                    </div>
+                    <div class="field-radio-calc__input-wrap">
+                      <label class="field-radio-calc__item">
+                        <input class="field-radio-calc__input" type="radio" id="" name="demo-radio">
+                        <span class="field-radio-calc__item-text">4 мес.</span>
+                      </label>
+                    </div>
+                    <div class="field-radio-calc__input-wrap">
+                      <label class="field-radio-calc__item">
+                        <input class="field-radio-calc__input" type="radio" id="" name="demo-radio">
+                        <span class="field-radio-calc__item-text">5 мес.</span>
+                      </label>
+                    </div>
+                    <div class="field-radio-calc__input-wrap">
+                      <label class="field-radio-calc__item">
+                        <input class="field-radio-calc__input" type="radio" id="" name="demo-radio">
+                        <span class="field-radio-calc__item-text">6 мес.</span>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="field-radio-calc__caption">
+                    Расчет калькулятора произведен по ставкам, действующим при условии оформления финансовой защиты к кредиту. Не является публичной офертой.
+                  </div>
+                </div>
+              </div>
+              <div class="cash-calc__col">
+                <div class="cash-calc__info">
+                  <h4>Наше предложение</h4>
+                  <div class="cash-calc__result">
+                    <svg width="51" height="51" class="icon">
+                      <use xlink:href="img/sprite-svg.svg#ruble"></use>
+                    </svg>
+                    <span>Ежедневный платеж</span>
+                    <div>23&#160;156&#160;<span class="rub">a</span></div>
+                  </div>
+                  <div class="cash-calc__result">
+                    <svg width="51" height="51" class="icon">
+                      <use xlink:href="img/sprite-svg.svg#business-and-finance"></use>
+                    </svg>
+                    <span>Процентная ставка</span>
+                    <div>14&#160;%</div>
+                  </div>
+                  <div class="cash-calc__action">
+                    <a href="#" class="btn btn--main btn--disabled">Заполнить заявку</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </section>
+      <!-- ./l-section -->
+
+      <!-- l-section -->
+      <section class="l-section gray-bg" id="section-4">
+        <div class="l-section__container">
+          <div class="l-section__header">
+            <h2 class="l-section__title">Что такое Freshcapital и чем он мне полезен</h2>
+            <p class="l-section__sub-title">Типичный блок, который можно использовать для дополнительного текста</p>
+          </div>
+          <div class="about-box">
+            <div class="about-box__body">
+              <div class="about-box__wrap">
+                <div class="about-box__caption">
+                  <h3>Компания Fresh Capital – это финансовая компания</h3>
+                  <p>Мы первые в России, кто запустил инновационный ФИНТЕХ-продукт под собственным названием POS FACTOR </p>
+                  <p>Наш продукт выгодно отличается и полезен для предприятий малого и среднего бизнеса.</p>
+                  <p>В развитых странах мира поддержка малого и среднего бизнеса является одной из приоритетных задач, которая ставится, как перед банковским сектором страны, так и перед прочими финансовыми институтами, существующими на рынке. </p>
+                </div>
+                <div class="about-box__list">
+                  <ul>
+                    <li>
+                      <svg width="52" height="50" class="icon">
+                        <use xlink:href="img/sprite-svg.svg#molecule"></use>
+                      </svg>
+                      <span><b>Инновационное</b> бизнес решение</span>
+                    </li>
+                    <li>
+                      <svg width="44" height="54" class="icon">
+                        <use xlink:href="img/sprite-svg.svg#document"></use>
+                      </svg>
+                      <span><b>Одобряем в 99%</b> по 2-м документам</span>
+                    </li>
+                    <li>
+                      <svg width="52" height="42" class="icon">
+                        <use xlink:href="img/sprite-svg.svg#charity"></use>
+                      </svg>
+                      <span>Поддержка <b>малого и среднего бизнеса</b> в России </span>
+                    </li>
+                    <li>
+                      <svg width="49" height="49" class="icon">
+                        <use xlink:href="img/sprite-svg.svg#safety"></use>
+                      </svg>
+                      <span><b>100%</b> банковская безопасность</span>
+                    </li>
+                    <li>
+                      <svg width="52" height="52" class="icon">
+                        <use xlink:href="img/sprite-svg.svg#payment-method"></use>
+                      </svg>
+                      <span><b>Быстрый и доступный</b> кредит</span>
+                    </li>
+                    <li>
+                      <svg width="48" height="44" class="icon">
+                        <use xlink:href="img/sprite-svg.svg#suitcase"></use>
+                      </svg>
+                      <span>Корпоративная <b>поддержка</b></span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="about-box__action">
+              <a href="#modal-call-back" class="btn btn--main" data-toggle="modal">Получить консультацию</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ./l-section -->
+
+      <!-- l-section -->
+      <section class="l-section" id="section-5">
+        <div class="l-section__container">
+          <div class="l-section__header">
+            <h2 class="l-section__title">Контакты</h2>
+            <p class="l-section__sub-title">Оставьте заявку и мы свяжемся с вами</p>
+          </div>
+          <div class="contacts">
+            <div class="contacts__col">
+              <form action="" class="contacts__send">
+                <label class="field-text">
+                  <span class="field-text__name">Ваше имя</span>
+                  <span class="field-text__input-wrap">
+                    <input class="field-text__input" type="text" id="" name="">
+                  </span>
+                </label>
+                <label class="field-text">
+                  <span class="field-text__name">Номер телефона</span>
+                  <span class="field-text__input-wrap">
+                    <input class="field-text__input" type="tel" placeholder="+7 ( ___ ) ___ - __ -__" id="" name="">
+                  </span>
+                </label>
+                <div class="field-checkbox">
+                  <label class="field-checkbox__name">
+                    <input class="field-checkbox__input" type="checkbox" id="" name="" checked>
+                    <span class="field-checkbox__name-text">Я соглашаюсь с <a href="#">правилами обработки и использования</a> моих персональных данных и разрешаю сделать запрос в бюро кредитных историй</span>
+                  </label>
+                </div>
+                <a href="#" class="btn btn--main">Отправить заявку</a>
+              </form>
+              <p class="garant-info">
+                <svg width="36" height="36" class="icon" style="vertical-align: middle;">
+                  <use xlink:href="img/sprite-svg.svg#shield"></use>
+                </svg>
+                Мы гарантируем безопасность и сохранность ваших данных</p>
+            </div>
+            <div class="contacts__col">
+              <div class="contacts__map" style="background-image: url(img/map.jpg);">
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ./l-section -->
+
+      <!-- l-section -->
+      <section class="l-section" id="section-6">
+        <div class="l-section__container">
+          <div class="l-section__header">
+            <h2 class="l-section__title">Кому может быть полезно</h2>
+            <p class="l-section__sub-title">Небольшой текст дающий понять что это за блок</p>
+          </div>
+          <div class="accordion-group accordion-group--num-list" id="accordion-group-3">
+            <article class="accordion-group__accordion">
+              <header class="accordion-group__accordion-head">
+                <h3 class="accordion-group__accordion-heading"><button type="button" class="accordion-group__accordion-btn">Открыть новый филиал</button></h3>
+              </header>
+              <div class="accordion-group__accordion-panel">
+                <div class="accordion-group__accordion-content">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                    ex ea commodo consequat. Duis aute
+                    irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+                    sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
+              </div>
+            </article>
+            <article class="accordion-group__accordion">
+              <header class="accordion-group__accordion-head">
+                <h3 class="accordion-group__accordion-heading"><button type="button" class="accordion-group__accordion-btn">Провести рекламную компанию</button></h3>
+              </header>
+              <div class="accordion-group__accordion-panel">
+                <div class="accordion-group__accordion-content">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                    ex ea commodo consequat. Duis aute
+                    irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+                    sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
+              </div>
+            </article>
+            <article class="accordion-group__accordion accordion-group__accordion_expanded">
+              <header class="accordion-group__accordion-head">
+                <h3 class="accordion-group__accordion-heading"><button type="button" class="accordion-group__accordion-btn">Провести ремонт</button></h3>
+              </header>
+              <div class="accordion-group__accordion-panel">
+                <div class="accordion-group__accordion-content">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                    ex ea commodo consequat. Duis aute
+                    irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+                    sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
+              </div>
+            </article>
+            <article class="accordion-group__accordion">
+              <header class="accordion-group__accordion-head">
+                <h3 class="accordion-group__accordion-heading"><button type="button" class="accordion-group__accordion-btn">Обновить оборудование</button></h3>
+              </header>
+              <div class="accordion-group__accordion-panel">
+                <div class="accordion-group__accordion-content">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                    ex ea commodo consequat. Duis aute
+                    irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+                    sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
+              </div>
+            </article>
+            <article class="accordion-group__accordion">
+              <header class="accordion-group__accordion-head">
+                <h3 class="accordion-group__accordion-heading"><button type="button" class="accordion-group__accordion-btn">Расширить вссортимент товаров</button></h3>
+              </header>
+              <div class="accordion-group__accordion-panel">
+                <div class="accordion-group__accordion-content">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                    ex ea commodo consequat. Duis aute
+                    irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+                    sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
+              </div>
+            </article>
+            <article class="accordion-group__accordion">
+              <header class="accordion-group__accordion-head">
+                <h3 class="accordion-group__accordion-heading"><button type="button" class="accordion-group__accordion-btn">Закупить недостающую продукцию</button></h3>
+              </header>
+              <div class="accordion-group__accordion-panel">
+                <div class="accordion-group__accordion-content">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                    ex ea commodo consequat. Duis aute
+                    irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+                    sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+      <!-- ./l-section -->
+
+      <!-- l-section -->
+      <section class="l-section gray-bg" id="section-7">
+        <div class="l-section__container">
+          <div class="l-section__header">
+            <h2 class="l-section__title">Частые вопросы</h2>
+            <p class="l-section__sub-title">Типичный блок, который можно использовать для дополнительного текста</p>
+          </div>
+          <div class="faq-box">
+            <div class="faq-box__col">
+              <div class="accordion-group accordion-group--faq" id="accordion-group-3">
+                <article class="accordion-group__accordion">
+                  <header class="accordion-group__accordion-head">
+                    <h3 class="accordion-group__accordion-heading"><button type="button" class="accordion-group__accordion-btn">Когда будут перечислены деньги? </button></h3>
+                  </header>
+                  <div class="accordion-group__accordion-panel">
+                    <div class="accordion-group__accordion-content">
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                        dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                        ex ea commodo consequat. Duis aute
+                        irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+                        sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    </div>
+                  </div>
+                </article>
+                <article class="accordion-group__accordion accordion-group__accordion_expanded">
+                  <header class="accordion-group__accordion-head">
+                    <h3 class="accordion-group__accordion-heading"><button type="button" class="accordion-group__accordion-btn">Что такое рефинансирование? </button></h3>
+                  </header>
+                  <div class="accordion-group__accordion-panel">
+                    <div class="accordion-group__accordion-content">
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                        dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                        ex ea commodo consequat. Duis aute
+                        irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+                        sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    </div>
+                  </div>
+                </article>
+                <article class="accordion-group__accordion">
+                  <header class="accordion-group__accordion-head">
+                    <h3 class="accordion-group__accordion-heading"><button type="button" class="accordion-group__accordion-btn">Можно ли получить финансирование больше, чем оборот по банковским картам? </button></h3>
+                  </header>
+                  <div class="accordion-group__accordion-panel">
+                    <div class="accordion-group__accordion-content">
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                        dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                        ex ea commodo consequat. Duis aute
+                        irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+                        sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    </div>
+                  </div>
+                </article>
+                <article class="accordion-group__accordion">
+                  <header class="accordion-group__accordion-head">
+                    <h3 class="accordion-group__accordion-heading"><button type="button" class="accordion-group__accordion-btn">Возможно ли получить повторное финансирование? </button></h3>
+                  </header>
+                  <div class="accordion-group__accordion-panel">
+                    <div class="accordion-group__accordion-content">
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                        dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                        ex ea commodo consequat. Duis aute
+                        irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+                        sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    </div>
+                  </div>
+                </article>
+              </div>
+            </div>
+            <div class="faq-box__col">
+              <div class="accordion-group accordion-group--faq" id="accordion-group-3">
+                <article class="accordion-group__accordion">
+                  <header class="accordion-group__accordion-head">
+                    <h3 class="accordion-group__accordion-heading"><button type="button" class="accordion-group__accordion-btn">Что делать, если у меня нет терминала?  </button></h3>
+                  </header>
+                  <div class="accordion-group__accordion-panel">
+                    <div class="accordion-group__accordion-content">
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                        dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                        ex ea commodo consequat. Duis aute
+                        irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+                        sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    </div>
+                  </div>
+                </article>
+                <article class="accordion-group__accordion">
+                  <header class="accordion-group__accordion-head">
+                    <h3 class="accordion-group__accordion-heading"><button type="button" class="accordion-group__accordion-btn">Каким способом происходит возврат денежных средств?  </button></h3>
+                  </header>
+                  <div class="accordion-group__accordion-panel">
+                    <div class="accordion-group__accordion-content">
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                        dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                        ex ea commodo consequat. Duis aute
+                        irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+                        sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    </div>
+                  </div>
+                </article>
+                <article class="accordion-group__accordion">
+                  <header class="accordion-group__accordion-head">
+                    <h3 class="accordion-group__accordion-heading"><button type="button" class="accordion-group__accordion-btn">Можно ли получить деньги наличными? </button></h3>
+                  </header>
+                  <div class="accordion-group__accordion-panel">
+                    <div class="accordion-group__accordion-content">
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                        dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                        ex ea commodo consequat. Duis aute
+                        irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+                        sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    </div>
+                  </div>
+                </article>
+                <article class="accordion-group__accordion">
+                  <header class="accordion-group__accordion-head">
+                    <h3 class="accordion-group__accordion-heading"><button type="button" class="accordion-group__accordion-btn">Если у меня были просрочки в банке, будут ли меня финансировать? </button></h3>
+                  </header>
+                  <div class="accordion-group__accordion-panel">
+                    <div class="accordion-group__accordion-content">
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                        dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                        ex ea commodo consequat. Duis aute
+                        irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+                        sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    </div>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ./l-section -->
+
+      <!-- l-section -->
+      <section class="l-section">
+        <div class="l-section__container">
+          <div class="l-section__header">
+            <h2 class="l-section__title">Расскажите мне подробнее по телефону</h2>
+            <p class="l-section__sub-title">Подберем индивидуальную программу финансирования. Учтем Ваши индивидуальные требования и пожелания</p>
+          </div>
+          <div class="feedback-box">
+            <form action="" class="feedback-box__form">
+                <div class="feedback-box__group">
+                  <label class="field-text">
+                    <span class="field-text__name">Телефон</span>
+                    <span class="field-text__input-wrap">
+                      <input class="field-text__input" type="tel" placeholder="+7 ( ___ ) ___ - __ -__" id="" name="">
+                    </span>
+                  </label>
+                  <button class="btn btn--outline-green">Отправить</button>
+                </div>
+                <div class="field-checkbox">
+                  <label class="field-checkbox__name">
+                    <input class="field-checkbox__input" type="checkbox" id="" name="" checked>
+                    <span class="field-checkbox__name-text">Я согласен на <a href="#">обработку персональных данных</a></span>
+                  </label>
+                </div>
+                <p class="garant-info">
+                  <svg width="36" height="36" class="icon" style="vertical-align: middle;">
+                    <use xlink:href="img/sprite-svg.svg#shield"></use>
+                  </svg>
+                  Мы гарантируем безопасность и сохранность ваших данных</p>
+            </form>
+          </div>
+        </div>
+      </section>
+      <!-- ./l-section -->
+
+      <!-- l-section -->
+      <section class="l-section gray-bg">
+        <div class="l-section__container">
+          <div class="l-section__header">
+            <h2 class="l-section__title">Почему стоит выбирать нас</h2>
+            <p class="l-section__sub-title">Типичный блок, который можно использовать для дополнительного текста</p>
+          </div>
+          <div class="advantage-box">
+            <div class="advantage-box__item advantage-box__item--xl">
+              <div class="advantage-box__inner" style="background-image: url(img/advantage-box-img-01.jpg);">
+                <h4>Реальная помощь вашему бизнесу</h4>
+                <ul>
+                  <li>Восстановить финансовые показатели</li>
+                  <li>Вывести бизнес из кризиса</li>
+                  <li>Расширить пул клиентов</li>
+                  <li>Увеличить товарооборот</li>
+                  <li>Улучшить продажи</li>
+                  <li>Упростить планирование денежного оборота</li>
+                  <li>Пополнить оборотные средства</li>
+                  <li>Закупить новое оборудование</li>
+                  <li>Подготовить бизнес к сезонности</li>
+                  <li>Преодолеть форс-мажорные обстоятельства</li>
+                </ul>
+              </div>
+            </div>
+            <div class="advantage-box__item">
+              <div class="advantage-box__inner" style="background-image: url(img/advantage-box-img-02.jpg);">
+                <h4>Простота получения</h4>
+                <ul>
+                  <li>Финансирование без залога и поручителей</li>
+                  <li>Заявка по двум документам</li>
+                  <li>Решение по заявке в течение 24 часов</li>
+                  <li>Одобряем 98% заявок</li>
+                  <li>Деньги поступают за 72 часа</li>
+                </ul>
+              </div>
+            </div>
+            <div class="advantage-box__item">
+              <div class="advantage-box__inner" style="background-image: url(img/advantage-box-img-03.jpg);">
+                <h4>Деньги на любые цели</h4>
+                <ul>
+                  <li>Помощь действующему бизнесу</li>
+                  <li>Открытие другого бизнеса</li>
+                  <li>Реинвестирование денег</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ./l-section -->
+
+      <!-- l-section -->
+      <section class="l-section">
+        <div class="l-section__container">
+          <div class="l-section__header">
+            <h2 class="l-section__title">Наши клиенты</h2>
+            <p class="l-section__sub-title">Типичный блок, который можно использовать для дополнительного текста</p>
+          </div>
+          <div class="clients tabs">
+            <div class="clients__header" style="position: relative;">
+              <div class="swiper-nav-prev"></div>
+              <ul class="tabs__links swiper-container swiper-nav" role="tablist">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <li class="tabs__link-wrap  tabs__link-wrap--active" role="presentation">
+                      <a href="#demo-tab-01" class="tabs__link" data-toggle="tab" role="tab">Вкладка 01</a>
+                    </li>
+                  </div>
+                  <div class="swiper-slide">
+                    <li class="tabs__link-wrap" role="presentation">
+                      <a href="#demo-tab-02" class="tabs__link" data-toggle="tab" role="tab">Вкладка 02</a>
+                    </li>
+                  </div>
+                  <div class="swiper-slide">
+                    <li class="tabs__link-wrap" role="presentation">
+                      <a href="#demo-tab-03" class="tabs__link" data-toggle="tab" role="tab">Вкладка 03</a>
+                    </li>
+                  </div>
+                  <div class="swiper-slide">
+                    <li class="tabs__link-wrap" role="presentation">
+                      <a href="#demo-tab-04" class="tabs__link" data-toggle="tab" role="tab">Вкладка 04</a>
+                    </li>
+                  </div>
+                  <div class="swiper-slide">
+                    <li class="tabs__link-wrap" role="presentation">
+                      <a href="#demo-tab-05" class="tabs__link" data-toggle="tab" role="tab">Вкладка 05</a>
+                    </li>
+                  </div>
+                  <div class="swiper-slide">
+                    <li class="tabs__link-wrap" role="presentation">
+                      <a href="#demo-tab-06" class="tabs__link" data-toggle="tab" role="tab">Вкладка 06</a>
+                    </li>
+                  </div>
+                  <div class="swiper-slide">
+                    <li class="tabs__link-wrap" role="presentation">
+                      <a href="#demo-tab-06" class="tabs__link" data-toggle="tab" role="tab">Вкладка 07</a>
+                    </li>
+                  </div>
+                  <div class="swiper-slide">
+                    <li class="tabs__link-wrap" role="presentation">
+                      <a href="#demo-tab-06" class="tabs__link" data-toggle="tab" role="tab">Вкладка 08</a>
+                    </li>
+                  </div>
+                  <div class="swiper-slide">
+                    <li class="tabs__link-wrap" role="presentation">
+                      <a href="#demo-tab-06" class="tabs__link" data-toggle="tab" role="tab">Вкладка 09</a>
+                    </li>
+                  </div>
+                  <div class="swiper-slide">
+                    <li class="tabs__link-wrap" role="presentation">
+                      <a href="#demo-tab-06" class="tabs__link" data-toggle="tab" role="tab">Вкладка 10</a>
+                    </li>
+                  </div>
+                </div>
+                <div class="swiper-pagination"></div>
+              </ul>
+              <div class="swiper-nav-next"></div>
+            </div>
+            <div class="clients__body">
+              <div class="tabs__content-wrapper">
+                <div class="tabs__content-item tabs__content-item--active" id="demo-tab-01" role="tabpanel">
+                  <img src="img/content-img-01.jpg" alt="">
+                  <h3>Сеть франшизы магазинов «Фасоль» </h3>
+                  <p>Предприниматель открыл по франшизе магазин сети «Фасоль». Поспецифике сегмента, продуктовому магазину на приобритение популярности и  востребованности требуется несколько месяцев. На поддержание деятельности магазина  в течение нескольких месяцев предпринимателю не хватало оборотных средств, в следствие чего предприниматель оформил заявку на финансирование. </p>
+                  <p>Финансирование проходило в несколько этапов: </p>
+                  <p>1) Оборот по терминалам – 490 000 рублей. Получили финансирование по программе «Максима+» на сумму 600 000 рублей. Что сделали – заплатили аренду, закупили продукцию на 3 следующих месяца  Итог – деятельность магазина обеспечена на 3 месяца вперед.</p>
+                  <p>2) Магазин начал приобретать популярность, обороты по терминалам выросли до 950 000
+                  рублей.Погасили первое финансирование за 3 месяца, получили новое финансирование по
+                  программе «Максима» на 1 000 000 рублей. Что сделали – заплатили за аренду на 4 месяца вперед, закупили продукцию, обеспечив деятельность магазина еще на 4 месяца, наняли больше персонала, чтобы обеспечить прирост посещаемости. Итог – популярность магазина выросла, оплаченная на 4 месяца вперед аренда позволила сохранять вырученные средства для нужд магазина, магазин начал обеспечивать свою деятельность и приносить чистую прибыль владельцу.</p>
+                  <p>3) Оборот магазина вырос до 1 900 000 рублей. Закрыли первое финансирование за 4 месяца. Получили третье финансирование по программе «Универсальный» на 1 500 000 рублей. Что сделали – открыли второй магазин. Итог – за год сотрудничества и 3 этапа финансирования предприниматель от одного магазина и оборота в 490 000 рублей дошел до 2 магазинов и общего оборота в 4 100 000  рублей. </p>
+                </div>
+                <div class="tabs__content-item" id="demo-tab-02" role="tabpanel">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum odio quos rem quis omnis dolorum dicta dolor amet magnam sed inventore est molestias, praesentium reiciendis hic quibusdam! Architecto nemo vitae, illum ullam, magnam repellat ea, hic perspiciatis fugit recusandae soluta.</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum odio quos rem quis omnis dolorum dicta dolor amet magnam sed inventore est molestias, praesentium reiciendis hic quibusdam! Architecto nemo vitae, illum ullam, magnam repellat ea, hic perspiciatis fugit recusandae soluta.</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum odio quos rem quis omnis dolorum dicta dolor amet magnam sed inventore est molestias, praesentium reiciendis hic quibusdam! Architecto nemo vitae, illum ullam, magnam repellat ea, hic perspiciatis fugit recusandae soluta.</p>
+                </div>
+                <div class="tabs__content-item" id="demo-tab-03" role="tabpanel">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum odio quos rem quis omnis dolorum dicta dolor amet magnam sed inventore est molestias, praesentium reiciendis hic quibusdam! Architecto nemo vitae, illum ullam, magnam repellat ea, hic perspiciatis fugit recusandae soluta. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum odio quos rem quis omnis dolorum dicta dolor amet magnam sed inventore est molestias, praesentium reiciendis hic quibusdam! Architecto nemo vitae, illum ullam, magnam repellat ea, hic perspiciatis fugit recusandae soluta.</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum odio quos rem quis omnis dolorum dicta dolor amet magnam sed inventore est molestias, praesentium reiciendis hic quibusdam! Architecto nemo vitae, illum ullam, magnam repellat ea, hic perspiciatis fugit recusandae soluta.</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum odio quos rem quis omnis dolorum dicta dolor amet magnam sed inventore est molestias, praesentium reiciendis hic quibusdam! Architecto nemo vitae, illum ullam, magnam repellat ea, hic perspiciatis fugit recusandae soluta.</p>
+                </div>
+                <div class="tabs__content-item" id="demo-tab-04" role="tabpanel">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum odio quos rem quis omnis dolorum dicta dolor amet magnam sed inventore est molestias, praesentium reiciendis hic quibusdam! Architecto nemo vitae, illum ullam, magnam repellat ea, hic perspiciatis fugit recusandae soluta.</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum odio quos rem quis omnis dolorum dicta dolor amet magnam sed inventore est molestias, praesentium reiciendis hic quibusdam! Architecto nemo vitae, illum ullam, magnam repellat ea, hic perspiciatis fugit recusandae soluta.</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum odio quos rem quis omnis dolorum dicta dolor amet magnam sed inventore est molestias, praesentium reiciendis hic quibusdam! Architecto nemo vitae, illum ullam, magnam repellat ea, hic perspiciatis fugit recusandae soluta.</p>
+                </div>
+                <div class="tabs__content-item" id="demo-tab-05" role="tabpanel">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum odio quos rem quis omnis dolorum dicta dolor amet magnam sed inventore est molestias, praesentium reiciendis hic quibusdam! Architecto nemo vitae, illum ullam, magnam repellat ea, hic perspiciatis fugit recusandae soluta. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum odio quos rem quis omnis dolorum dicta dolor amet magnam sed inventore est molestias, praesentium reiciendis hic quibusdam! Architecto nemo vitae, illum ullam, magnam repellat ea, hic perspiciatis fugit recusandae soluta.</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum odio quos rem quis omnis dolorum dicta dolor amet magnam sed inventore est molestias, praesentium reiciendis hic quibusdam! Architecto nemo vitae, illum ullam, magnam repellat ea, hic perspiciatis fugit recusandae soluta.</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum odio quos rem quis omnis dolorum dicta dolor amet magnam sed inventore est molestias, praesentium reiciendis hic quibusdam! Architecto nemo vitae, illum ullam, magnam repellat ea, hic perspiciatis fugit recusandae soluta.</p>
+                </div>
+                <div class="tabs__content-item" id="demo-tab-06" role="tabpanel">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum odio quos rem quis omnis dolorum dicta dolor amet magnam sed inventore est molestias, praesentium reiciendis hic quibusdam! Architecto nemo vitae, illum ullam, magnam repellat ea, hic perspiciatis fugit recusandae soluta.</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum odio quos rem quis omnis dolorum dicta dolor amet magnam sed inventore est molestias, praesentium reiciendis hic quibusdam! Architecto nemo vitae, illum ullam, magnam repellat ea, hic perspiciatis fugit recusandae soluta.</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum odio quos rem quis omnis dolorum dicta dolor amet magnam sed inventore est molestias, praesentium reiciendis hic quibusdam! Architecto nemo vitae, illum ullam, magnam repellat ea, hic perspiciatis fugit recusandae soluta.</p>
+                </div>
+                <div class="tabs__content-item" id="demo-tab-07" role="tabpanel">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum odio quos rem quis omnis dolorum dicta dolor amet magnam sed inventore est molestias, praesentium reiciendis hic quibusdam! Architecto nemo vitae, illum ullam, magnam repellat ea, hic perspiciatis fugit recusandae soluta. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum odio quos rem quis omnis dolorum dicta dolor amet magnam sed inventore est molestias, praesentium reiciendis hic quibusdam! Architecto nemo vitae, illum ullam, magnam repellat ea, hic perspiciatis fugit recusandae soluta.</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum odio quos rem quis omnis dolorum dicta dolor amet magnam sed inventore est molestias, praesentium reiciendis hic quibusdam! Architecto nemo vitae, illum ullam, magnam repellat ea, hic perspiciatis fugit recusandae soluta.</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum odio quos rem quis omnis dolorum dicta dolor amet magnam sed inventore est molestias, praesentium reiciendis hic quibusdam! Architecto nemo vitae, illum ullam, magnam repellat ea, hic perspiciatis fugit recusandae soluta.</p>
+                </div>
+                <div class="tabs__content-item" id="demo-tab-08" role="tabpanel">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum odio quos rem quis omnis dolorum dicta dolor amet magnam sed inventore est molestias, praesentium reiciendis hic quibusdam! Architecto nemo vitae, illum ullam, magnam repellat ea, hic perspiciatis fugit recusandae soluta.</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum odio quos rem quis omnis dolorum dicta dolor amet magnam sed inventore est molestias, praesentium reiciendis hic quibusdam! Architecto nemo vitae, illum ullam, magnam repellat ea, hic perspiciatis fugit recusandae soluta.</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum odio quos rem quis omnis dolorum dicta dolor amet magnam sed inventore est molestias, praesentium reiciendis hic quibusdam! Architecto nemo vitae, illum ullam, magnam repellat ea, hic perspiciatis fugit recusandae soluta.</p>
+                </div>
+                <div class="tabs__content-item" id="demo-tab-09" role="tabpanel">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum odio quos rem quis omnis dolorum dicta dolor amet magnam sed inventore est molestias, praesentium reiciendis hic quibusdam! Architecto nemo vitae, illum ullam, magnam repellat ea, hic perspiciatis fugit recusandae soluta. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum odio quos rem quis omnis dolorum dicta dolor amet magnam sed inventore est molestias, praesentium reiciendis hic quibusdam! Architecto nemo vitae, illum ullam, magnam repellat ea, hic perspiciatis fugit recusandae soluta.</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum odio quos rem quis omnis dolorum dicta dolor amet magnam sed inventore est molestias, praesentium reiciendis hic quibusdam! Architecto nemo vitae, illum ullam, magnam repellat ea, hic perspiciatis fugit recusandae soluta.</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum odio quos rem quis omnis dolorum dicta dolor amet magnam sed inventore est molestias, praesentium reiciendis hic quibusdam! Architecto nemo vitae, illum ullam, magnam repellat ea, hic perspiciatis fugit recusandae soluta.</p>
+                </div>
+                <div class="tabs__content-item" id="demo-tab-10" role="tabpanel">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum odio quos rem quis omnis dolorum dicta dolor amet magnam sed inventore est molestias, praesentium reiciendis hic quibusdam! Architecto nemo vitae, illum ullam, magnam repellat ea, hic perspiciatis fugit recusandae soluta. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum odio quos rem quis omnis dolorum dicta dolor amet magnam sed inventore est molestias, praesentium reiciendis hic quibusdam! Architecto nemo vitae, illum ullam, magnam repellat ea, hic perspiciatis fugit recusandae soluta.</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum odio quos rem quis omnis dolorum dicta dolor amet magnam sed inventore est molestias, praesentium reiciendis hic quibusdam! Architecto nemo vitae, illum ullam, magnam repellat ea, hic perspiciatis fugit recusandae soluta.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ./l-section -->
+
+      <!-- l-section -->
+      <section class="l-section gray-bg">
+        <div class="l-section__container">
+          <div class="l-section__header">
+            <h2 class="l-section__title">Наглядное видео о Pos Factor</h2>
+            <p class="l-section__sub-title">Типичный блок, который можно использовать для дополнительного текста</p>
+          </div>
+          <div class="video-box">
+            <div class="video-box__caption-wrap">
+              <div class="video-box__caption">
+                <h3>Подзаголовок</h3>
+                <p>Pos Factor – инновационный продукт, созданный компанией Fresh Capital, как новый инструмент финансирования и реальной поддержки МСБ. </p>
+                <p><a href="#" class="btn btn--main">Заказать</a></p>
+              </div>
+            </div>
+            <div class="video-box__prev-wrap">
+              <div class="video-box__prev">
+                <a href="#">
+                  <img src="img/video-prev-img.jpg" alt="">
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ./l-section -->
+
+      <!-- l-section -->
+      <section class="l-section">
+        <div class="l-section__container">
+          <div class="l-section__header">
+            <h2 class="l-section__title">О нас пишут</h2>
+            <p class="l-section__sub-title">Типичный блок, который можно использовать для дополнительного текста</p>
+          </div>
+          <div class="swiper-pres__wrap">
+            <div class="swiper-pres swiper-container">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide">
+                      <div class="press-card">
+                        <div class="press-card__inner">
+                          <div class="press-card__logo-wrap">
+                            <img src="img/press-logo-01.png" alt="">
+                          </div>
+                          <div class="press-card__title">РБК</div>
+                          <a href="#" class="press-card__link">pro.rbc.ru</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="press-card">
+                        <div class="press-card__inner">
+                          <div class="press-card__logo-wrap">
+                            <img src="img/press-logo-02.png" alt="">
+                          </div>
+                          <div class="press-card__title">Банки РУ</div>
+                          <a href="#" class="press-card__link">banki.ru</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="press-card">
+                        <div class="press-card__inner">
+                          <div class="press-card__logo-wrap">
+                            <img src="img/press-logo-03.png" alt="">
+                          </div>
+                          <div class="press-card__title">Бибокс</div>
+                          <a href="#" class="press-card__link">beboss.ru</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="press-card">
+                        <div class="press-card__inner">
+                          <div class="press-card__logo-wrap">
+                            <img src="img/press-logo-04.png" alt="">
+                          </div>
+                          <div class="press-card__title">VC</div>
+                          <a href="#" class="press-card__link">vc.ru</a>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ./l-section -->
+
+      <!-- l-section -->
+      <section class="l-section gray-bg">
+        <div class="l-section__container">
+          <div class="pos-terminal">
+            <div class="pos-terminal__info">
+              <h2>Что делать если у вас нет POS-терминала?</h2>
+              <div class="pos-terminal__caption">
+                <ul class="pos-terminal__list">
+                  <li>Заполнить и подписать документы на установку</li>
+                  <li>Срок установки терминала до 5 дней</li>
+                  <li>Терминал готов к работе</li>
+                </ul>
+                <a href="#modal-terminal" class="btn btn--main" data-toggle="modal">Выбрать</a>
+              </div>
+            </div>
+            <div class="pos-terminal__imag-wrap">
+              <img src="img/terminal-img.png" alt="">
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ./l-section -->
+
+      <!-- l-section -->
+      <section class="l-section">
+        <div class="l-section__container">
+          <div class="l-section__header">
+            <h2 class="l-section__title">Почему стоит финансироваться у нас?</h2>
+            <p class="l-section__sub-title">Типичный блок, который можно использовать для дополнительного текста</p>
+          </div>
+          <div class="swiper-container swiper-compare">
+              <!-- Additional required wrapper -->
+              <div class="swiper-wrapper">
+                  <!-- Slides -->
+                  <div class="swiper-slide">
+                    <div class="compare-card">
+                      <div class="compare-card__header">
+                        <h4 class="compare-card__title">Документы, необходимые для получения финансирования</h4>
+                      </div>
+                      <div class="compare-card__body">
+                        <div class="compare-card__col compare-card__col--fc">
+                          <div class="compare-card__logo-wrap">
+                            <img src="img/logo.png" alt="">
+                          </div>
+                          <h5>Получить деньги во Fresh Capital</h5>
+                          <ul>
+                            <li>Простой и быстрый процесс рассмотрения заявки и выдачи денежных средств. </li>
+                            <li>Минимальный пакет документов. </li>
+                          </ul>
+                        </div>
+                        <div class="compare-card__col">
+                          <div class="compare-card__logo-wrap">
+                            <img src="img/bank-logo.png" alt="">
+                          </div>
+                          <h5>Получить кредит в банке</h5>
+                          <ul>
+                            <li>Длительное рассмотрение заявки. </li>
+                            <li>Расширенный пакет документов. </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="compare-card">
+                      <div class="compare-card__header">
+                        <h4 class="compare-card__title">Документы, необходимые для получения финансирования</h4>
+                      </div>
+                      <div class="compare-card__body">
+                        <div class="compare-card__col compare-card__col--fc">
+                          <div class="compare-card__logo-wrap">
+                            <img src="img/logo.png" alt="">
+                          </div>
+                          <h5>Получить деньги во Fresh Capital</h5>
+                          <ul>
+                            <li>Простой и быстрый процесс рассмотрения заявки и выдачи денежных средств. </li>
+                            <li>Минимальный пакет документов. </li>
+                          </ul>
+                        </div>
+                        <div class="compare-card__col">
+                          <div class="compare-card__logo-wrap">
+                            <img src="img/bank-logo.png" alt="">
+                          </div>
+                          <h5>Получить кредит в банке</h5>
+                          <ul>
+                            <li>Длительное рассмотрение заявки. </li>
+                            <li>Расширенный пакет документов. </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="compare-card">
+                      <div class="compare-card__header">
+                        <h4 class="compare-card__title">Документы, необходимые для получения финансирования</h4>
+                      </div>
+                      <div class="compare-card__body">
+                        <div class="compare-card__col compare-card__col--fc">
+                          <div class="compare-card__logo-wrap">
+                            <img src="img/logo.png" alt="">
+                          </div>
+                          <h5>Получить деньги во Fresh Capital</h5>
+                          <ul>
+                            <li>Простой и быстрый процесс рассмотрения заявки и выдачи денежных средств. </li>
+                            <li>Минимальный пакет документов. </li>
+                          </ul>
+                        </div>
+                        <div class="compare-card__col">
+                          <div class="compare-card__logo-wrap">
+                            <img src="img/bank-logo.png" alt="">
+                          </div>
+                          <h5>Получить кредит в банке</h5>
+                          <ul>
+                            <li>Длительное рассмотрение заявки. </li>
+                            <li>Расширенный пакет документов. </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="compare-card">
+                      <div class="compare-card__header">
+                        <h4 class="compare-card__title">Документы, необходимые для получения финансирования</h4>
+                      </div>
+                      <div class="compare-card__body">
+                        <div class="compare-card__col compare-card__col--fc">
+                          <div class="compare-card__logo-wrap">
+                            <img src="img/logo.png" alt="">
+                          </div>
+                          <h5>Получить деньги во Fresh Capital</h5>
+                          <ul>
+                            <li>Простой и быстрый процесс рассмотрения заявки и выдачи денежных средств. </li>
+                            <li>Минимальный пакет документов. </li>
+                          </ul>
+                        </div>
+                        <div class="compare-card__col">
+                          <div class="compare-card__logo-wrap">
+                            <img src="img/bank-logo.png" alt="">
+                          </div>
+                          <h5>Получить кредит в банке</h5>
+                          <ul>
+                            <li>Длительное рассмотрение заявки. </li>
+                            <li>Расширенный пакет документов. </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+              <!-- If we need pagination -->
+              <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </section>
+      <!-- ./l-section -->
+
+    </div>
+
+    <div class="page__footer-wrapper">
+
+      <footer class="page-footer" role="contentinfo">
+        <div class="page-footer__container">
+          <div class="page-footer__row">
+            <div class="page-footer__col page-footer__col--info">
+              <img src="img/logo-footer.png" alt="" class="page-footer__logo">
+              <p>ООО «ФрешКапитал»<br>ИНН 3425345242<br>КПП 2452452345</p>
+            </div>
+            <div class="page-footer__col page-footer__col--links">
+              <ul class="nav page-footer__list">
+                <li><a href="#section-1">Схема работы</a></li>
+                <li><a href="#section-2">Что это?</a></li>
+                <li><a href="#section-3">Для кого это?</a></li>
+                <li><a href="#section-4">Калькулятор</a></li>
+                <li><a href="#section-5">Как получить деньги</a></li>
+                <li><a href="#section-6">О нас</a></li>
+                <li><a href="#section-7">Контакты</a></li>
+              </ul>
+            </div>
+            <div class="page-footer__col page-footer__col--contacts">
+              <div class="page-footer__contacts">
+                <div class="contacts-part contacts-part--white">
+                  <div class="contacts-part__title">Звонок бесплатный</div>
+                  <a class="contacts-part__item contacts-part__item--phone" href="tel:88003456767">
+                    <svg width="16" height="16" class="icon">
+                      <use xlink:href="img/sprite-svg.svg#phone-receiver"></use>
+                    </svg>
+                    8 (800) 245-67-67
+                  </a>
+                </div>
+                <div class="contacts-part contacts-part--white">
+                  <div class="contacts-part__title">Адрес</div>
+                  <div class="contacts-part__item contacts-part__item--addr">
+                    <svg width="16" height="16" class="icon">
+                      <use xlink:href="img/sprite-svg.svg#location-pin"></use>
+                    </svg>
+                    Москва, ул. Власова 45
+                  </div>
+                </div>
+                <div class="contacts-part">
+                  <ul class="social">
+                    <li class="social__link-wrap  social__link-wrap--vk" title="Vkontakte">
+                      <a class="social__link" href="#">
+                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 304.36 304.36" style="enable-background:new 0 0 304.36 304.36;" xml:space="preserve">
+                          <g id="XMLID_1_">
+                            <path id="XMLID_807_" style="fill-rule:evenodd;clip-rule:evenodd;" d="M261.945,175.576c10.096,9.857,20.752,19.131,29.807,29.982
+                                              c4,4.822,7.787,9.798,10.684,15.394c4.105,7.955,0.387,16.709-6.746,17.184l-44.34-0.02c-11.436,0.949-20.559-3.655-28.23-11.474
+                                              c-6.139-6.253-11.824-12.908-17.727-19.372c-2.42-2.642-4.953-5.128-7.979-7.093c-6.053-3.929-11.307-2.726-14.766,3.587
+                                              c-3.523,6.421-4.322,13.531-4.668,20.687c-0.475,10.441-3.631,13.186-14.119,13.664c-22.414,1.057-43.686-2.334-63.447-13.641
+                                              c-17.422-9.968-30.932-24.04-42.691-39.971C34.828,153.482,17.295,119.395,1.537,84.353C-2.01,76.458,0.584,72.22,9.295,72.07
+                                              c14.465-0.281,28.928-0.261,43.41-0.02c5.879,0.086,9.771,3.458,12.041,9.012c7.826,19.243,17.402,37.551,29.422,54.521
+                                              c3.201,4.518,6.465,9.036,11.113,12.216c5.142,3.521,9.057,2.354,11.476-3.374c1.535-3.632,2.207-7.544,2.553-11.434
+                                              c1.146-13.383,1.297-26.743-0.713-40.079c-1.234-8.323-5.922-13.711-14.227-15.286c-4.238-0.803-3.607-2.38-1.555-4.799
+                                              c3.564-4.172,6.916-6.769,13.598-6.769h50.111c7.889,1.557,9.641,5.101,10.721,13.039l0.043,55.663
+                                              c-0.086,3.073,1.535,12.192,7.07,14.226c4.43,1.448,7.35-2.096,10.008-4.905c11.998-12.734,20.561-27.783,28.211-43.366
+                                              c3.395-6.852,6.314-13.968,9.143-21.078c2.096-5.276,5.385-7.872,11.328-7.757l48.229,0.043c1.43,0,2.877,0.021,4.262,0.258
+                                              c8.127,1.385,10.354,4.881,7.844,12.817c-3.955,12.451-11.65,22.827-19.174,33.251c-8.043,11.129-16.645,21.877-24.621,33.072
+                                              C252.26,161.544,252.842,166.697,261.945,175.576L261.945,175.576z M261.945,175.576" />
+                          </g>
+                        </svg>
+                      </a>
+                    </li>
+                    <li class="social__link-wrap  social__link-wrap--fb" title="Facebook">
+                      <a class="social__link" href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 470.513 470.513">
+                          <path d="M271.521 154.17v-40.541c0-6.086.28-10.8.849-14.13.567-3.335 1.857-6.615 3.859-9.853 1.999-3.236 5.236-5.47 9.706-6.708 4.476-1.24 10.424-1.858 17.85-1.858h40.539V0h-64.809c-37.5 0-64.433 8.897-80.803 26.691-16.368 17.798-24.551 44.014-24.551 78.658v48.82h-48.542v81.086h48.539v235.256h97.362V235.256h64.805l8.566-81.086h-73.37z"></path>
+                        </svg>
+                      </a>
+                    </li>
+                    <li class="social__link-wrap  social__link-wrap--ok" title="Odnoklassniki">
+                      <a class="social__link" href="#">
+                        <svg id="Bold" enable-background="new 0 0 24 24" height="512" viewBox="0 0 24 24" width="512" xmlns="http://www.w3.org/2000/svg"><path d="m4.721 12.881c-.613 1.205.083 1.781 1.671 2.765 1.35.834 3.215 1.139 4.413 1.261-.491.472 1.759-1.692-4.721 4.541-1.374 1.317.838 3.43 2.211 2.141l3.717-3.585c1.423 1.369 2.787 2.681 3.717 3.59 1.374 1.294 3.585-.801 2.226-2.141-.102-.097-5.037-4.831-4.736-4.541 1.213-.122 3.05-.445 4.384-1.261l-.001-.001c1.588-.989 2.284-1.564 1.68-2.769-.365-.684-1.349-1.256-2.659-.267 0 0-1.769 1.355-4.622 1.355-2.854 0-4.622-1.355-4.622-1.355-1.309-.994-2.297-.417-2.658.267z"/><path d="m11.999 12.142c3.478 0 6.318-2.718 6.318-6.064 0-3.36-2.84-6.078-6.318-6.078-3.479 0-6.319 2.718-6.319 6.078 0 3.346 2.84 6.064 6.319 6.064zm0-9.063c1.709 0 3.103 1.341 3.103 2.999 0 1.644-1.394 2.985-3.103 2.985s-3.103-1.341-3.103-2.985c-.001-1.659 1.393-2.999 3.103-2.999z"/></svg>
+                      </a>
+                    </li>
+                    <li class="social__link-wrap  social__link-wrap--go" title="Google plus">
+                      <a class="social__link" href="#">
+                        <svg id="Bold" enable-background="new 0 0 24 24" height="512" viewBox="0 0 24 24" width="512" xmlns="http://www.w3.org/2000/svg"><path d="m21.823 9h-2.187v2.177h-2.177v2.187h2.177v2.177h2.187v-2.177h2.177v-2.187h-2.177z"/><path d="m7.5 19.5c4.328 0 7.203-3.038 7.203-7.326 0-.491-.051-.87-.122-1.248h-7.08v2.578h4.257c-.174 1.095-1.289 3.233-4.257 3.233-2.557 0-4.645-2.118-4.645-4.737s2.087-4.738 4.645-4.738c1.463 0 2.435.624 2.988 1.156l2.036-1.954c-1.311-1.227-2.999-1.964-5.025-1.964-4.144 0-7.5 3.356-7.5 7.5s3.356 7.5 7.5 7.5z"/></svg>
+                      </a>
+                    </li>
+                    <li class="social__link-wrap  social__link-wrap--you" title="Youtube">
+                      <a class="social__link" href="#">
+                        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                           width="511.627px" height="511.627px" viewBox="0 0 511.627 511.627" style="enable-background:new 0 0 511.627 511.627;"
+                           xml:space="preserve">
+                        <g>
+                          <g>
+                            <path d="M459.954,264.376c-2.471-11.233-7.949-20.653-16.416-28.264c-8.474-7.611-18.227-12.085-29.27-13.418
+                              c-35.02-3.806-87.837-5.708-158.457-5.708c-70.618,0-123.341,1.903-158.174,5.708c-11.227,1.333-21.029,5.807-29.407,13.418
+                              c-8.376,7.614-13.896,17.035-16.562,28.264c-4.948,22.083-7.423,55.391-7.423,99.931c0,45.299,2.475,78.61,7.423,99.93
+                              c2.478,11.225,7.951,20.653,16.421,28.261c8.47,7.614,18.225,11.991,29.263,13.134c35.026,3.997,87.847,5.996,158.461,5.996
+                              c70.609,0,123.44-1.999,158.453-5.996c11.043-1.143,20.748-5.52,29.126-13.134c8.377-7.607,13.897-17.036,16.56-28.261
+                              c4.948-22.083,7.426-55.391,7.426-99.93C467.377,319.007,464.899,285.695,459.954,264.376z M165.025,293.218h-30.549v162.45
+                              h-28.549v-162.45h-29.98v-26.837h89.079V293.218z M242.11,455.668H216.7v-15.421c-10.278,11.615-19.989,17.419-29.125,17.419
+                              c-8.754,0-14.275-3.524-16.556-10.564c-1.521-4.568-2.286-11.519-2.286-20.844V314.627h25.41v103.924
+                              c0,6.088,0.096,9.421,0.288,9.993c0.571,3.997,2.568,5.995,5.996,5.995c5.138,0,10.566-3.997,16.274-11.991V314.627h25.41V455.668
+                              z M339.183,413.411c0,13.894-0.855,23.417-2.56,28.558c-3.244,10.462-9.996,15.697-20.273,15.697
+                              c-9.137,0-17.986-5.235-26.556-15.697v13.702h-25.406v-189.29h25.406v61.955c8.189-10.273,17.036-15.413,26.556-15.413
+                              c10.277,0,17.029,5.331,20.273,15.988c1.704,4.948,2.56,14.369,2.56,28.264V413.411z M435.685,390.003h-51.104v24.839
+                              c0,13.134,4.374,19.697,13.131,19.697c6.279,0,10.089-3.422,11.42-10.28c0.376-1.902,0.571-7.706,0.571-17.412h25.981v3.71
+                              c0,9.329-0.195,14.846-0.572,16.563c-0.567,5.133-2.56,10.273-5.995,15.413c-6.852,10.089-17.139,15.133-30.841,15.133
+                              c-13.127,0-23.407-4.855-30.833-14.558c-5.517-7.043-8.275-18.083-8.275-33.12v-49.396c0-15.036,2.662-26.076,7.987-33.119
+                              c7.427-9.705,17.61-14.558,30.557-14.558c12.755,0,22.85,4.853,30.263,14.558c5.146,7.043,7.71,18.083,7.71,33.119V390.003
+                              L435.685,390.003z"/>
+                            <path d="M302.634,336.043c-4.38,0-8.658,2.101-12.847,6.283v85.934c4.188,4.186,8.467,6.279,12.847,6.279
+                              c7.419,0,11.14-6.372,11.14-19.13v-60.236C313.773,342.418,310.061,336.043,302.634,336.043z"/>
+                            <path d="M397.428,336.043c-8.565,0-12.847,6.475-12.847,19.41v13.134h25.693v-13.134
+                              C410.274,342.511,405.99,336.043,397.428,336.043z"/>
+                            <path d="M148.473,113.917v77.375h28.549v-77.375L211.563,0h-29.121l-19.41,75.089L142.759,0h-30.262
+                              c5.33,15.99,11.516,33.785,18.559,53.391C140.003,79.656,145.805,99.835,148.473,113.917z"/>
+                            <path d="M249.82,193.291c13.134,0,23.219-4.854,30.262-14.561c5.332-7.043,7.994-18.274,7.994-33.689V95.075
+                              c0-15.225-2.669-26.363-7.994-33.406c-7.043-9.707-17.128-14.561-30.262-14.561c-12.756,0-22.75,4.854-29.98,14.561
+                              c-5.327,7.043-7.992,18.181-7.992,33.406v49.965c0,15.225,2.662,26.457,7.992,33.689
+                              C227.073,188.437,237.063,193.291,249.82,193.291z M237.541,89.935c0-13.134,4.093-19.701,12.279-19.701
+                              s12.275,6.567,12.275,19.701v59.955c0,13.328-4.089,19.985-12.275,19.985s-12.279-6.661-12.279-19.985V89.935z"/>
+                            <path d="M328.328,193.291c9.523,0,19.328-5.901,29.413-17.705v15.703h25.981V48.822h-25.981v108.777
+                              c-5.712,8.186-11.133,12.275-16.279,12.275c-3.429,0-5.428-2.093-5.996-6.28c-0.191-0.381-0.287-3.715-0.287-9.994V48.822h-25.981
+                              v112.492c0,9.705,0.767,16.84,2.286,21.411C313.961,189.768,319.574,193.291,328.328,193.291z"/>
+                          </g>
+                        </g>
+                        </svg>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="page-footer__bottom">
+            <p><a href="#">Соглашение на обработку персональных данных</a></p>
+            <p><a href="#">Политика конфиденциальности</a></p>
+          </div>
+        </div>
+      </footer>
+
+    </div>
+
+  </div>
+
+  <div class="drawer-nav">
+    <div class="drawer-nav__header">
+      <div href="#" class="drawer-nav__logo"><img src="img/logo.png" alt=""></div>
+      <div class="burger burger--close drawer-toggle"><span></span></div>
+    </div>
+    <div class="drawer-nav__body">
+      <ul class="nav mobile-menu">
+        <li><a href="#section-1">Схема работы</a></li>
+        <li><a href="#section-2">Что это?</a></li>
+        <li><a href="#section-3">Для кого это?</a></li>
+        <li><a href="#section-4">Калькулятор</a></li>
+        <li><a href="#section-5">Как получить деньги?</a></li>
+        <li><a href="#section-6">О нас</a></li>
+        <li><a href="#section-7">Контакты</a></li>
+      </ul>
+      <div class="drawer-nav__contacts">
+        <div class="contacts-part contacts-part--dark">
+          <div class="contacts-part__title">Адрес</div>
+          <div class="contacts-part__item contacts-part__item--addr">
+            <svg width="16" height="16" class="icon">
+              <use xlink:href="img/sprite-svg.svg#location-pin"></use>
+            </svg>
+            Москва, ул. Власова 45
+          </div>
+        </div>
+        <div class="contacts-part contacts-part--dark">
+          <div class="contacts-part__title">Звонок бесплатный</div>
+          <a class="contacts-part__item contacts-part__item--phone" href="tel:88003456767">
+            <svg width="16" height="16" class="icon">
+              <use xlink:href="img/sprite-svg.svg#phone-receiver"></use>
+            </svg>
+            8 (800) 245-67-67
+          </a>
+        </div>
+      </div>
+      <ul class="social">
+        <li class="social__link-wrap  social__link-wrap--vk" title="Vkontakte">
+          <a class="social__link" href="#">
+            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 304.36 304.36" style="enable-background:new 0 0 304.36 304.36;" xml:space="preserve">
+              <g id="XMLID_1_">
+                <path id="XMLID_807_" style="fill-rule:evenodd;clip-rule:evenodd;" d="M261.945,175.576c10.096,9.857,20.752,19.131,29.807,29.982
+                                  c4,4.822,7.787,9.798,10.684,15.394c4.105,7.955,0.387,16.709-6.746,17.184l-44.34-0.02c-11.436,0.949-20.559-3.655-28.23-11.474
+                                  c-6.139-6.253-11.824-12.908-17.727-19.372c-2.42-2.642-4.953-5.128-7.979-7.093c-6.053-3.929-11.307-2.726-14.766,3.587
+                                  c-3.523,6.421-4.322,13.531-4.668,20.687c-0.475,10.441-3.631,13.186-14.119,13.664c-22.414,1.057-43.686-2.334-63.447-13.641
+                                  c-17.422-9.968-30.932-24.04-42.691-39.971C34.828,153.482,17.295,119.395,1.537,84.353C-2.01,76.458,0.584,72.22,9.295,72.07
+                                  c14.465-0.281,28.928-0.261,43.41-0.02c5.879,0.086,9.771,3.458,12.041,9.012c7.826,19.243,17.402,37.551,29.422,54.521
+                                  c3.201,4.518,6.465,9.036,11.113,12.216c5.142,3.521,9.057,2.354,11.476-3.374c1.535-3.632,2.207-7.544,2.553-11.434
+                                  c1.146-13.383,1.297-26.743-0.713-40.079c-1.234-8.323-5.922-13.711-14.227-15.286c-4.238-0.803-3.607-2.38-1.555-4.799
+                                  c3.564-4.172,6.916-6.769,13.598-6.769h50.111c7.889,1.557,9.641,5.101,10.721,13.039l0.043,55.663
+                                  c-0.086,3.073,1.535,12.192,7.07,14.226c4.43,1.448,7.35-2.096,10.008-4.905c11.998-12.734,20.561-27.783,28.211-43.366
+                                  c3.395-6.852,6.314-13.968,9.143-21.078c2.096-5.276,5.385-7.872,11.328-7.757l48.229,0.043c1.43,0,2.877,0.021,4.262,0.258
+                                  c8.127,1.385,10.354,4.881,7.844,12.817c-3.955,12.451-11.65,22.827-19.174,33.251c-8.043,11.129-16.645,21.877-24.621,33.072
+                                  C252.26,161.544,252.842,166.697,261.945,175.576L261.945,175.576z M261.945,175.576" />
+              </g>
+            </svg>
+          </a>
+        </li>
+        <li class="social__link-wrap  social__link-wrap--fb" title="Facebook">
+          <a class="social__link" href="#">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 470.513 470.513">
+              <path d="M271.521 154.17v-40.541c0-6.086.28-10.8.849-14.13.567-3.335 1.857-6.615 3.859-9.853 1.999-3.236 5.236-5.47 9.706-6.708 4.476-1.24 10.424-1.858 17.85-1.858h40.539V0h-64.809c-37.5 0-64.433 8.897-80.803 26.691-16.368 17.798-24.551 44.014-24.551 78.658v48.82h-48.542v81.086h48.539v235.256h97.362V235.256h64.805l8.566-81.086h-73.37z"></path>
+            </svg>
+          </a>
+        </li>
+        <li class="social__link-wrap  social__link-wrap--ok" title="Odnoklassniki">
+          <a class="social__link" href="#">
+            <svg id="Bold" enable-background="new 0 0 24 24" height="512" viewBox="0 0 24 24" width="512" xmlns="http://www.w3.org/2000/svg"><path d="m4.721 12.881c-.613 1.205.083 1.781 1.671 2.765 1.35.834 3.215 1.139 4.413 1.261-.491.472 1.759-1.692-4.721 4.541-1.374 1.317.838 3.43 2.211 2.141l3.717-3.585c1.423 1.369 2.787 2.681 3.717 3.59 1.374 1.294 3.585-.801 2.226-2.141-.102-.097-5.037-4.831-4.736-4.541 1.213-.122 3.05-.445 4.384-1.261l-.001-.001c1.588-.989 2.284-1.564 1.68-2.769-.365-.684-1.349-1.256-2.659-.267 0 0-1.769 1.355-4.622 1.355-2.854 0-4.622-1.355-4.622-1.355-1.309-.994-2.297-.417-2.658.267z"/><path d="m11.999 12.142c3.478 0 6.318-2.718 6.318-6.064 0-3.36-2.84-6.078-6.318-6.078-3.479 0-6.319 2.718-6.319 6.078 0 3.346 2.84 6.064 6.319 6.064zm0-9.063c1.709 0 3.103 1.341 3.103 2.999 0 1.644-1.394 2.985-3.103 2.985s-3.103-1.341-3.103-2.985c-.001-1.659 1.393-2.999 3.103-2.999z"/></svg>
+          </a>
+        </li>
+        <li class="social__link-wrap  social__link-wrap--go" title="Google plus">
+          <a class="social__link" href="#">
+            <svg id="Bold" enable-background="new 0 0 24 24" height="512" viewBox="0 0 24 24" width="512" xmlns="http://www.w3.org/2000/svg"><path d="m21.823 9h-2.187v2.177h-2.177v2.187h2.177v2.177h2.187v-2.177h2.177v-2.187h-2.177z"/><path d="m7.5 19.5c4.328 0 7.203-3.038 7.203-7.326 0-.491-.051-.87-.122-1.248h-7.08v2.578h4.257c-.174 1.095-1.289 3.233-4.257 3.233-2.557 0-4.645-2.118-4.645-4.737s2.087-4.738 4.645-4.738c1.463 0 2.435.624 2.988 1.156l2.036-1.954c-1.311-1.227-2.999-1.964-5.025-1.964-4.144 0-7.5 3.356-7.5 7.5s3.356 7.5 7.5 7.5z"/></svg>
+          </a>
+        </li>
+        <li class="social__link-wrap  social__link-wrap--you" title="Youtube">
+          <a class="social__link" href="#">
+            <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+               width="511.627px" height="511.627px" viewBox="0 0 511.627 511.627" style="enable-background:new 0 0 511.627 511.627;"
+               xml:space="preserve">
+            <g>
+              <g>
+                <path d="M459.954,264.376c-2.471-11.233-7.949-20.653-16.416-28.264c-8.474-7.611-18.227-12.085-29.27-13.418
+                  c-35.02-3.806-87.837-5.708-158.457-5.708c-70.618,0-123.341,1.903-158.174,5.708c-11.227,1.333-21.029,5.807-29.407,13.418
+                  c-8.376,7.614-13.896,17.035-16.562,28.264c-4.948,22.083-7.423,55.391-7.423,99.931c0,45.299,2.475,78.61,7.423,99.93
+                  c2.478,11.225,7.951,20.653,16.421,28.261c8.47,7.614,18.225,11.991,29.263,13.134c35.026,3.997,87.847,5.996,158.461,5.996
+                  c70.609,0,123.44-1.999,158.453-5.996c11.043-1.143,20.748-5.52,29.126-13.134c8.377-7.607,13.897-17.036,16.56-28.261
+                  c4.948-22.083,7.426-55.391,7.426-99.93C467.377,319.007,464.899,285.695,459.954,264.376z M165.025,293.218h-30.549v162.45
+                  h-28.549v-162.45h-29.98v-26.837h89.079V293.218z M242.11,455.668H216.7v-15.421c-10.278,11.615-19.989,17.419-29.125,17.419
+                  c-8.754,0-14.275-3.524-16.556-10.564c-1.521-4.568-2.286-11.519-2.286-20.844V314.627h25.41v103.924
+                  c0,6.088,0.096,9.421,0.288,9.993c0.571,3.997,2.568,5.995,5.996,5.995c5.138,0,10.566-3.997,16.274-11.991V314.627h25.41V455.668
+                  z M339.183,413.411c0,13.894-0.855,23.417-2.56,28.558c-3.244,10.462-9.996,15.697-20.273,15.697
+                  c-9.137,0-17.986-5.235-26.556-15.697v13.702h-25.406v-189.29h25.406v61.955c8.189-10.273,17.036-15.413,26.556-15.413
+                  c10.277,0,17.029,5.331,20.273,15.988c1.704,4.948,2.56,14.369,2.56,28.264V413.411z M435.685,390.003h-51.104v24.839
+                  c0,13.134,4.374,19.697,13.131,19.697c6.279,0,10.089-3.422,11.42-10.28c0.376-1.902,0.571-7.706,0.571-17.412h25.981v3.71
+                  c0,9.329-0.195,14.846-0.572,16.563c-0.567,5.133-2.56,10.273-5.995,15.413c-6.852,10.089-17.139,15.133-30.841,15.133
+                  c-13.127,0-23.407-4.855-30.833-14.558c-5.517-7.043-8.275-18.083-8.275-33.12v-49.396c0-15.036,2.662-26.076,7.987-33.119
+                  c7.427-9.705,17.61-14.558,30.557-14.558c12.755,0,22.85,4.853,30.263,14.558c5.146,7.043,7.71,18.083,7.71,33.119V390.003
+                  L435.685,390.003z"/>
+                <path d="M302.634,336.043c-4.38,0-8.658,2.101-12.847,6.283v85.934c4.188,4.186,8.467,6.279,12.847,6.279
+                  c7.419,0,11.14-6.372,11.14-19.13v-60.236C313.773,342.418,310.061,336.043,302.634,336.043z"/>
+                <path d="M397.428,336.043c-8.565,0-12.847,6.475-12.847,19.41v13.134h25.693v-13.134
+                  C410.274,342.511,405.99,336.043,397.428,336.043z"/>
+                <path d="M148.473,113.917v77.375h28.549v-77.375L211.563,0h-29.121l-19.41,75.089L142.759,0h-30.262
+                  c5.33,15.99,11.516,33.785,18.559,53.391C140.003,79.656,145.805,99.835,148.473,113.917z"/>
+                <path d="M249.82,193.291c13.134,0,23.219-4.854,30.262-14.561c5.332-7.043,7.994-18.274,7.994-33.689V95.075
+                  c0-15.225-2.669-26.363-7.994-33.406c-7.043-9.707-17.128-14.561-30.262-14.561c-12.756,0-22.75,4.854-29.98,14.561
+                  c-5.327,7.043-7.992,18.181-7.992,33.406v49.965c0,15.225,2.662,26.457,7.992,33.689
+                  C227.073,188.437,237.063,193.291,249.82,193.291z M237.541,89.935c0-13.134,4.093-19.701,12.279-19.701
+                  s12.275,6.567,12.275,19.701v59.955c0,13.328-4.089,19.985-12.275,19.985s-12.279-6.661-12.279-19.985V89.935z"/>
+                <path d="M328.328,193.291c9.523,0,19.328-5.901,29.413-17.705v15.703h25.981V48.822h-25.981v108.777
+                  c-5.712,8.186-11.133,12.275-16.279,12.275c-3.429,0-5.428-2.093-5.996-6.28c-0.191-0.381-0.287-3.715-0.287-9.994V48.822h-25.981
+                  v112.492c0,9.705,0.767,16.84,2.286,21.411C313.961,189.768,319.574,193.291,328.328,193.291z"/>
+              </g>
+            </g>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="overlay"></div>
+
+  <div id="modal-call-back" class="modal" tabindex="-1" role="dialog">
+    <div class="modal__dialog" role="document">
+      <div class="modal__content">
+        <div class="modal__row">
+          <div class="modal__col">
+            <div class="modal__header">
+              <a href="#" class="close  modal__close" data-dismiss="modal" aria-label="Закрыть"><span></span></a>
+              <h3 class="modal__title">Перезвоним вам в течении 15 минут</h3>
+            </div>
+            <form action="" class="modal__body">
+              <label class="field-text">
+                <span class="field-text__name">Ваше имя</span>
+                <span class="field-text__input-wrap">
+                  <input class="field-text__input" type="text" id="" name="">
+                </span>
+              </label>
+              <label class="field-text">
+                <span class="field-text__name">Номер телефона</span>
+                <span class="field-text__input-wrap">
+                  <input class="field-text__input" type="tel" placeholder="+7 ( ___ ) ___ - __ -__" id="" name="">
+                </span>
+              </label>
+              <div class="field-radio">
+                <div class="field-radio__input-wrap">
+                  <label class="field-radio__name">
+                    <input class="field-radio__input" type="radio" id="" name="demo-radio" checked>
+                    <span class="field-radio__name-text">ООО</span>
+                  </label>
+                </div>
+                <div class="field-radio__input-wrap">
+                  <label class="field-radio__name">
+                    <input class="field-radio__input" type="radio" id="" name="demo-radio">
+                    <span class="field-radio__name-text">ИП</span>
+                  </label>
+                </div>
+              </div>
+              <div class="field-checkbox">
+                <label class="field-checkbox__name">
+                  <input class="field-checkbox__input" type="checkbox" id="" name="" checked>
+                  <span class="field-checkbox__name-text">Я согласен <a href="#">на обработку персональных данных</a></span>
+                </label>
+              </div>
+              <a href="#" class="btn btn--main">Заказать звонок</a>
+              <p class="garant-info">
+                <svg width="36" height="36" class="icon" style="vertical-align: middle;">
+                  <use xlink:href="img/sprite-svg.svg#shield"></use>
+                </svg>
+                Мы гарантируем безопасность и сохранность ваших данных
+              </p>
+            </form>
+          </div>
+          <div class="modal__col modal__col--img-wrap">
+            <img src="img/modal-call-back-img.jpg" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="modal-terminal" class="modal" tabindex="-1" role="dialog">
+    <div class="modal__dialog" role="document">
+      <div class="modal__content">
+        <div class="modal__header">
+          <a href="#" class="close  modal__close" data-dismiss="modal" aria-label="Закрыть"><span></span></a>
+          <h3 class="modal__title">Выбрать POS-терминал</h3>
+        </div>
+        <form action="" class="modal__body">
+        <div class="field-radio-term">
+          <div class="field-radio-term__input-wrap">
+            <label class="field-radio-term__name">
+              <input class="field-radio-term__input" type="radio" id="" name="demo-radio" checked>
+              <span class="field-radio-term__name-card">
+                <span class="term-img-wrap">
+                  <img src="img/term-img-01.jpg" alt="" class="term-img">
+                </span>
+                <span class="ferm-name">Стационарный</span>
+              </span>
+            </label>
+          </div>
+          <div class="field-radio-term__input-wrap">
+            <label class="field-radio-term__name">
+              <input class="field-radio-term__input" type="radio" id="" name="demo-radio" checked>
+              <span class="field-radio-term__name-card">
+                <span class="term-img-wrap">
+                  <img src="img/term-img-02.jpg" alt="" class="term-img">
+                </span>
+                <span class="ferm-name">Мобильный</span>
+              </span>
+            </label>
+          </div>
+          <div class="field-radio-term__input-wrap">
+            <label class="field-radio-term__name">
+              <input class="field-radio-term__input" type="radio" id="" name="demo-radio" checked>
+              <span class="field-radio-term__name-card">
+                <span class="term-img-wrap">
+                  <img src="img/term-img-03.jpg" alt="" class="term-img">
+                </span>
+                <span class="ferm-name">Пин-пад для онлайн касс</span>
+              </span>
+            </label>
+          </div>
+        </div>
+          <label class="field-text">
+            <span class="field-text__name">Номер телефона</span>
+            <span class="field-text__input-wrap">
+              <input class="field-text__input" type="tel" placeholder="+7 ( ___ ) ___ - __ -__" id="" name="">
+            </span>
+          </label>
+          <div class="field-checkbox">
+            <label class="field-checkbox__name">
+              <input class="field-checkbox__input" type="checkbox" id="" name="" checked>
+              <span class="field-checkbox__name-text">Я согласен <a href="#">на обработку персональных данных</a></span>
+            </label>
+          </div>
+          <div class="field__action">
+            <a href="#" class="btn btn--main">Отправить заявку</a>
+            <p class="garant-info">
+              <svg width="36" height="36" class="icon" style="vertical-align: middle;">
+                <use xlink:href="img/sprite-svg.svg#shield"></use>
+              </svg>
+              Мы гарантируем безопасность и сохранность ваших данных
+            </p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div id="modal-check" class="modal modal--info" tabindex="-1" role="dialog">
+    <div class="modal__dialog" role="document">
+      <div class="modal__content">
+        <div class="modal__body">
+          <a href="#" class="close  modal__close" data-dismiss="modal" aria-label="Закрыть"><span></span></a>
+          <svg width="52" height="52" class="icon icon--success" style="vertical-align: middle;">
+            <use xlink:href="img/sprite-svg.svg#success"></use>
+          </svg>
+          <p>Спасибо за вашу заявку. В течении 15 минут мы вам перезвоним</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="js/script.min.js"></script>
+
+
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $('body').ihavecookies({
+        title: '&#x1F36A; Разрещить сайту принимать Cookie?',
+        message: 'На этом сайте не используются файлы cookie, соглашаясь вы предоставите возможность принимать файли куки, или можете их настроить самостоятельно',
+        delay: 600,
+        expires: 1,
+        link: '#privacy', onAccept: function() { var myPreferences = $.fn.ihavecookies.cookie();
+        console.log('Yay! The following preferences were saved...'); console.log(myPreferences); },
+        uncheckBoxes: true,
+        acceptBtnLabel: 'Соглашаюсь',
+        moreInfoLabel: 'Больше информации',
+        cookieTypesTitle: 'Выберите, файлы куки которые хотите принимать:',
+        fixedCookieTypeLabel: 'Основное',
+        fixedCookieTypeDesc: 'These are essential for the website to work correctly.' });
+        if ($.fn.ihavecookies.preference('marketing') === true) { console.log('This should run because marketing is accepted.'); }
+    });
+  </script>
+
+</body>
+</html>
