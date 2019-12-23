@@ -1,0 +1,152 @@
+// В этом файле должны быть стили для БЭМ-блока accordion-group, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+//import t-css-framework modules
+// @import "../../node_modules/t-css-framework/src/settings/settings.import";
+// @import "../../node_modules/t-css-framework/src/functions/functions.import";
+// @import "../../node_modules/t-css-framework/src/helpers/helpers.import";
+
+// //import accordion modules
+// @import "../../node_modules/t-aria-accordion/src/scss/accordion-group/accordion-group.variables";
+// @import "../../node_modules/t-aria-accordion/src/scss/accordion-group/accordion-group";
+// @import "../../node_modules/t-aria-accordion/src/scss/accordion-group/accordion-group__elements";
+// @import "../../node_modules/t-aria-accordion/src/scss/accordion-group/modifiers/accordion-group_expanded";
+// @import "../../node_modules/t-aria-accordion/src/scss/accordion-group/modifiers/accordion-group__btn_expanded";
+// @import "../../node_modules/t-aria-accordion/src/scss/accordion-group/modifiers/accordion-group__panel_expaned";
+
+
+.accordion-group {
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__accordion {
+    margin-bottom: 20px;
+  }
+  &__accordion-head {
+  }
+  &__accordion-heading {
+    margin: 0;
+  }
+  &__accordion-btn {
+    background-color: #f7f8f9;
+    border: 1px solid #dddfe2;
+    border-radius: 3px;
+    display: block;
+    width: 100%;
+    text-align: left;
+    font-size: 18px;
+    padding: 1em 45px 1em 1.4em;
+    cursor: pointer;
+    position: relative;
+
+    &:focus {
+      outline: none;
+    }
+
+    &:after {
+      content: "";
+      width: 14px;
+      height: 14px;
+      position: absolute;
+      right: 25px;
+      top: 50%;
+      transform: translateY(-50%);
+      border-bottom: 3px solid #a3b4d2;
+      border-right: 3px solid #a3b4d2;
+      border-radius: 2px;
+      transform: translateY(-70%) rotate(45deg);
+      transition: transform 0.3s, border-color 0.3s;
+    }
+
+    @media (max-width: $screen-sm) {
+      font-size: 14px;
+      padding-right: 35px;
+      padding-left: 10px;
+
+      &:after {
+        width: 10px;
+        height: 10px;
+        right: 15px;
+      }
+    }
+  }
+  &__accordion-panel {
+    padding: 15px 1.4em;
+  }
+  &__accordion-content {
+  }
+  &__accordion_expanded {
+
+    #{$block-name}__accordion-btn {
+      &:after {
+        transform: translateY(-30%) rotate(225deg);
+        border-color: #427eec;
+      }
+    }
+  }
+
+  &--num-list {
+    counter-reset: b;
+
+    #{$block-name}__accordion-btn {
+      &:before {
+        counter-increment: b;
+        content: "0" counter(b);
+        font-weight: 700;
+        color: #80abfa;
+        line-height: 1;
+        margin-right: 18px;
+
+        @media (max-width: $screen-sm) {
+          margin-right: 8px;
+        }
+      }
+    }
+  }
+
+  &--faq {
+    #{$block-name}__accordion-btn {
+      background-color: #fff;
+      min-height: 80px;
+
+      @media (max-width: $screen-sm) {
+        min-height: auto;
+      }
+    }
+
+    #{$block-name}__accordion-content {
+      p {
+        margin: 0;
+      }
+    }
+
+    #{$block-name}__accordion-panel {
+      padding-top: 0;
+      background-color: #fff;
+    }
+
+    #{$block-name}__accordion_expanded {
+
+      box-shadow: 0px 10px 30px 0px rgba(44, 47, 52, 0.1);
+      position: relative;
+
+      &:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 3px;
+        height: 100%;
+        background: #427eec;
+        z-index: 3;
+        transition: all 0.4s;
+      }
+
+      #{$block-name}__accordion-btn {
+        border-color: #fff;
+      }
+    }
+  }
+}

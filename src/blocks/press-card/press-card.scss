@@ -1,0 +1,22 @@
+// В этом файле должны быть стили для БЭМ-блока press-card, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.press-card {
+
+  $block-name:                &; // #{$block-name}__element
+
+  border: 1px solid #dddfe2;
+  border-radius: 3px;
+  background: #fff;
+  padding: 20px;
+  text-align: center;
+
+  &__link {
+    color: #427eec;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}

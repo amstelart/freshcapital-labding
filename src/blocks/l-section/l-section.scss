@@ -1,0 +1,49 @@
+// В этом файле должны быть стили для БЭМ-блока l-section, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.l-section {
+
+  $block-name:                &; // #{$block-name}__element
+
+  padding: 35px 0;
+
+  @media (min-width: $screen-lg) {
+    padding: 65px 0;
+  }
+
+  &__container {
+    @include container;
+  }
+
+  &__header {
+    text-align: center;
+    margin-bottom: 35px;
+
+    @media (min-width: $screen-lg) {
+      margin-bottom: 60px;
+    }
+  }
+
+  &__title {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  &__sub-title {
+    font-size: 14px;
+    color: #77797d;
+
+    @media (min-width: $screen-md) {
+      font-size: 16px;
+    }
+
+    @media (min-width: $screen-lg) {
+      font-size: 18px;
+    }
+  }
+
+  &.gray-bg {
+    background: #f7f8f9;
+  }
+}

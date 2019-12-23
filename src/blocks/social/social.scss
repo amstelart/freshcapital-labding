@@ -1,0 +1,84 @@
+// В этом файле должны быть стили для БЭМ-блока social, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+$color-vk:                    #4a76a8;
+$color-fb:                    #4267b2;
+$color-tw:                    #40a2f5;
+$color-gh:                    #24292e;
+$typo-margin-vertical:        1em;
+
+.social {
+
+  $block-name:                &; // #{$block-name}__element
+
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: $typo-margin-vertical;
+  margin-bottom: $typo-margin-vertical;
+  padding: 0;
+  list-style: none;
+
+  &__link-wrap {
+    margin-right: 10px;
+  }
+
+  &__link {
+    display: block;
+    padding: 5px;
+    background-color: transparent;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid #848689;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    #{$block-name}__link-wrap--vk & {
+      svg {
+        width: 22px;
+        height: 22px;
+      }
+    }
+    #{$block-name}__link-wrap--fb & {
+
+    }
+    #{$block-name}__link-wrap--ok & {
+
+    }
+    #{$block-name}__link-wrap--go & {
+      svg {
+        width: 20px;
+        height: 20px;
+      }
+    }
+    #{$block-name}__link-wrap--you & {
+      svg {
+        width: 22px;
+        height: 22px;
+      }
+    }
+
+    svg {
+      display: block;
+      width: 16px;
+      height: 16px;
+      fill: #848689;
+    }
+
+    &:hover,
+    &:focus {
+      border-color: #427eec;
+
+      svg {
+        fill:#427eec;
+      }
+    }
+  }
+
+  &__text {
+    @include hide-text;
+  }
+}

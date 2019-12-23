@@ -1,0 +1,149 @@
+// В этом файле должны быть стили для БЭМ-блока page-header, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.page-header {
+
+  $block-name:                &; // #{$block-name}__element
+
+  background: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 10;
+  box-shadow: rgba(44, 47, 52, 0.1) 0px 4px 10px 0px;
+
+  &__container {
+    @include container;
+  }
+
+  &__row {
+    display: flex;
+  }
+
+  &__box {
+    border-bottom: 1px solid #dde2e9;
+    padding: 16px 0;
+
+    #{$block-name}__row {
+      align-items: center;
+    }
+
+    @media (max-width: ($screen-lg - 1)) {
+      padding: 5px 0;
+    }
+  }
+
+  &__logo {
+    @include col();
+    max-width: 257px;
+    flex-basis: 257px;
+    margin-right: auto;
+
+    @media (max-width: ($screen-lg - 1)) {
+      max-width: 170px;
+      flex-basis: 170px;
+    }
+  }
+
+  &__info {
+    // @include col();
+    max-width: 420px;
+    flex-basis: 100%;
+    margin-right: 25px;
+    display: flex;
+    justify-content: space-between;
+
+    .contacts-part {
+      &:last-child {
+        text-align: right;
+      }
+    }
+
+    .contacts-part__item--addr {
+      font-size: 16px;
+    }
+    .contacts-part__item--phone {
+      font-size: 18px;
+    }
+
+    @media (max-width: ($screen-lg - 1)) {
+      display: none;
+    }
+  }
+
+  &__btns {
+
+    display: flex;
+    align-items: center;
+
+    .btn {
+      width: 100%;
+      padding: 14px 22px;
+
+      @media (max-width: ($screen-lg - 1)) {
+        font-size: 0;
+        padding: 6px 10px;
+      }
+    }
+
+    .burger {
+      margin-left: 20px;
+      flex-shrink: 0;
+      display: none;
+
+      @media (max-width: ($screen-lg - 1)) {
+        display: block;
+      }
+    }
+  }
+
+  &__nav {
+    @include container;
+
+    @media (max-width: ($screen-lg - 1)) {
+      display: none;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+
+      li {
+        &.current {
+          color: #427eec;
+        }
+      }
+      a {
+        text-decoration: none;
+        display: block;
+        font-size: 16px;
+        padding: 18px 18px;
+        color: currentColor;
+        white-space: nowrap;
+
+        &:hover {
+          color: #427eec;
+        }
+
+        @media (min-width: $screen-xl) {
+          padding: 18px 24px;
+        }
+      }
+    }
+  }
+
+  &.headroom--not-top {
+    #{$block-name}__box {
+      @media (min-width: $screen-lg) {
+        display: none;
+      }
+    }
+  }
+}

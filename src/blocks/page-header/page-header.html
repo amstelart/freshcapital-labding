@@ -1,0 +1,59 @@
+<!--DEV
+
+Нужно убрать пробел между @-ами:
+
+@ @include('blocks/page-header/page-header.html')
+
+-->
+
+<header class="page-header" role="banner">
+  <div class="page-header__box">
+    <div class="page-header__container">
+      <div class="page-header__row">
+        <a href="#" class="page-header__logo"><img src="img/logo.png" alt=""></a>
+        <div class="page-header__info">
+          <div class="contacts-part contacts-part--dark">
+            <div class="contacts-part__title">Адрес</div>
+            <div class="contacts-part__item contacts-part__item--addr">
+              <svg width="16" height="16" class="icon">
+                <use xlink:href="img/sprite-svg.svg#location-pin"></use>
+              </svg>
+              Москва, ул. Власова 45
+            </div>
+          </div>
+          <div class="contacts-part contacts-part--dark">
+            <div class="contacts-part__title">Звонок бесплатный</div>
+            <a class="contacts-part__item contacts-part__item--phone" href="tel:88003456767">
+              <svg width="16" height="16" class="icon">
+                <use xlink:href="img/sprite-svg.svg#phone-receiver"></use>
+              </svg>
+              8 (800) 245-67-67
+            </a>
+          </div>
+        </div>
+        <div class="page-header__btns">
+          <a href="#modal-call-back" class="btn btn--main" data-toggle="modal">
+            <svg width="16" height="16" class="btn__icon">
+              <use xlink:href="img/sprite-svg.svg#phone-receiver"></use>
+            </svg>
+            Обратный звонок
+          </a>
+          <div class="burger drawer-toggle"><span></span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <nav class="page-header__nav">
+    <div class="page-header__container">
+      <ul class="nav">
+        <li><a href="#section-1">Схема работы</a></li>
+        <li><a href="#section-2">Что это?</a></li>
+        <li><a href="#section-3">Для кого это?</a></li>
+        <li><a href="#section-4">Калькулятор</a></li>
+        <li><a href="#section-5">Как получить деньги?</a></li>
+        <li><a href="#section-6">О нас</a></li>
+        <li><a href="#section-7">Контакты</a></li>
+      </ul>
+    </div>
+  </nav>
+</header>

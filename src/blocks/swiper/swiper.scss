@@ -1,0 +1,123 @@
+// В этом файле должны быть стили для БЭМ-блока swiper, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+// .swiper {
+
+//   $block-name:                &; // #{$block-name}__element
+
+// }
+
+.swiper-nav {
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  overflow: hidden;
+  list-style: none;
+  padding: 0;
+  z-index: 1;
+
+  @media (min-width: $screen-lg) {
+    height: 400px;
+
+    .swiper-pagination {
+      display: none;
+    }
+  }
+}
+
+@media (min-width: $screen-lg) {
+  .swiper-nav-prev {
+    width: 100%;
+    height: 40px;
+    margin: auto;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:focus {
+      outline: none;
+    }
+
+    &:before {
+      content: "";
+      width: 18px;
+      height: 18px;
+      display: block;
+      border-bottom: 4px solid #b7b9bd;
+      border-right: 4px solid #b7b9bd;
+      border-radius: 2px;
+      transform: rotate(-135deg);
+      transition: transform 0.3s, border-color 0.3s;
+    }
+  }
+
+  .swiper-nav-next {
+    width: 100%;
+    height: 40px;
+    margin: auto;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:focus {
+      outline: none;
+    }
+
+    &:before {
+      content: "";
+      width: 18px;
+      height: 18px;
+      display: block;
+      border-bottom: 4px solid #b7b9bd;
+      border-right: 4px solid #b7b9bd;
+      border-radius: 2px;
+      transform: rotate(45deg);
+      transition: transform 0.3s, border-color 0.3s;
+    }
+  }
+}
+
+
+.swiper-pres {
+
+  overflow: visible;
+
+  &__wrap {
+    overflow: hidden;
+    padding: 0 30px;
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    position: absolute;
+    top: 50%;
+    width: 14px;
+    height: 25px;
+    margin-top: calc(-1 * 25px/ 2);
+    z-index: 10;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--swiper-navigation-color,var(--swiper-theme-color));
+
+    &:after {
+      font-size: 18px;
+      color: #b7b9bd;
+    }
+  }
+
+  .swiper-button-prev {
+    left: -22px;
+  }
+  .swiper-button-next {
+    right: -22px;
+  }
+}
+
+.swiper-compare {
+  padding-bottom: 45px;
+}

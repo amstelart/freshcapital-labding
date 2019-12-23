@@ -1,0 +1,100 @@
+// В этом файле должны быть стили для БЭМ-блока compare-card, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.compare-card {
+
+  $block-name:                &; // #{$block-name}__element
+
+  max-width: 900px;
+  margin: auto;
+
+  &__header {
+    background: #f7f8f9;
+    border-top: 1px solid #dddfe2;
+    border-left: 1px solid #dddfe2;
+    border-right: 1px solid #dddfe2;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    text-align: center;
+  }
+  &__title {
+    margin: 0;
+    padding: 25px 10px;
+  }
+  &__body {
+    display: flex;
+    border: 1px solid #dddfe2;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    padding: 15px 7% 30px 7%;
+
+    @media (max-width: $screen-sm) {
+      flex-wrap: wrap;
+      padding: 20px 15px;
+    }
+  }
+
+  &__logo-wrap {
+    height: 80px;
+    padding: 0 15px 0 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      max-width: 190px;
+    }
+  }
+
+  &__col {
+    flex-basis: 50%;
+    max-width: 50%;
+    padding: 0 20px;
+    text-align: center;
+
+    @media (max-width: $screen-sm) {
+      flex-basis: 100%;
+      max-width: 100%;
+      padding: 0;
+    }
+
+    h5 {
+      margin-bottom: 1.4em;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      text-align: left;
+
+      li {
+        position: relative;
+        padding-left: 30px;
+        margin-bottom: 15px;
+
+        &:before {
+          content: "";
+          position: absolute;
+          width: 20px;
+          height: 20px;
+          left: 0;
+          top: 0;
+          background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='iso-8859-1'%3F%3E%3C!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E%3Csvg version='1.1' id='Capa_1' fill='%23a7aaaf' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 426.667 426.667' style='enable-background:new 0 0 426.667 426.667;' xml:space='preserve'%3E%3Cg%3E%3Cg%3E%3Cpolygon points='426.667,59.733 366.933,0 213.333,153.6 59.733,0 0,59.733 153.6,213.333 0,366.933 59.733,426.667 213.333,273.067 366.933,426.667 426.667,366.933 273.067,213.333 '/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+          background-repeat: no-repeat;
+        }
+      }
+    }
+
+    &--fc {
+
+      ul {
+        li {
+          &:before {
+            background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='iso-8859-1'%3F%3E%3C!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E%3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 426.67 426.67' style='enable-background:new 0 0 426.67 426.67;' xml:space='preserve'%3E%3Cpath style='fill:%23fab034;' d='M153.504,366.839c-8.657,0-17.323-3.302-23.927-9.911L9.914,237.265 c-13.218-13.218-13.218-34.645,0-47.863c13.218-13.218,34.645-13.218,47.863,0l95.727,95.727l215.39-215.386 c13.218-13.214,34.65-13.218,47.859,0c13.222,13.218,13.222,34.65,0,47.863L177.436,356.928 C170.827,363.533,162.165,366.839,153.504,366.839z'/%3E%3C/svg%3E");
+          }
+        }
+      }
+    }
+  }
+}
