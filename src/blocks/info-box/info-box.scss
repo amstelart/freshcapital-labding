@@ -25,8 +25,12 @@
     position: relative;
     box-shadow: 0px 10px 30px 0px rgba(44, 47, 52, 0.1);
 
-    @media (max-width: ($screen-lg - 1)) {
-      display: inline-block;
+    @media (min-width: $screen-lg) {
+      display: block;
+    }
+
+    @media (min-width: $screen-md) {
+      display: inline-block;;
     }
 
     @media (max-width: $screen-sm) {
